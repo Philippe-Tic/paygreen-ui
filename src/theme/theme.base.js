@@ -21,16 +21,17 @@ for (const [size, value] of Object.entries(breakpoints)) {
 }
 
 export const ThemeBase = {
+    // global font Refactored in 16px base
     font: {
         size: {
-            tiny: '1rem',
-            xxs: '1.2rem',
-            xs: '1.4rem',
-            sm: '1.6rem',
-            base: '1.8rem',
-            md: '2.1rem',
-            lg: '3rem',
-            xl: '4rem',
+            tiny: '0.625rem',
+            xxs: '0.75rem',
+            xs: '0.875rem',
+            sm: '1rem',
+            base: '1.125rem',
+            md: '1.3125rem',
+            lg: '1.875rem',
+            xl: '2.5rem',
         },
         weight: {
             normal: 400,
@@ -40,6 +41,7 @@ export const ThemeBase = {
             base: 1,
             md: 1.5,
         },
+        // TODO: move to rem if possible
         spacing: '0.3em',
         underline: {
             space: {
@@ -51,6 +53,14 @@ export const ThemeBase = {
                 md: '12px',
                 lg: '24px',
                 xl: '24px',
+                // tiny: '0.5rem',
+                // xxs: '0.625rem',
+                // xs: '0.625rem',
+                // sm: '0.75rem',
+                // base: '0.75rem',
+                // md: '0.75rem',
+                // lg: '1.5rem',
+                // xl: '1.5rem',
             },
             line: {
                 tiny: '2px',
@@ -71,6 +81,14 @@ export const ThemeBase = {
                 md: '65px',
                 lg: '80px',
                 xl: '80px',
+                // tiny: '1.875rem',
+                // xxs: '2.5rem',
+                // xs: '2.5rem',
+                // sm: '3.125rem',
+                // base: '3.125rem',
+                // md: '4.0625rem',
+                // lg: '5rem',
+                // xl: '5rem',
             },
         },
     },
@@ -240,6 +258,7 @@ export const ThemeBase = {
     },
     screen: screens,
     breakpoint: breakpoints,
+    // button Refactored in 16px base
     button: {
         paddingWidth: {
             sm: '22px',
@@ -253,18 +272,21 @@ export const ThemeBase = {
         },
         shift: '3px',
         font: {
-            sm: '1.2rem',
-            md: '1.4rem',
-            lg: '1.5rem',
+            sm: '0.75rem',
+            md: '0.875rem',
+            lg: '0.9375rem',
         },
         letterSpacing: {
-            sm: '0.3rem',
-            md: '0.4rem',
-            lg: '0.45rem',
+            sm: '0.1875rem',
+            md: '0.25rem',
+            lg: '0.28125rem',
         },
     },
+    // daButton Refactored in 16px base
     daButton: {
         buttonHeight: {
+            // Warning: don't touch this px value while there is a lot of calcul based on that
+            // impossible to migrate to rem
             sm: '32px',
             md: '38px',
             lg: '44px',
@@ -275,14 +297,14 @@ export const ThemeBase = {
             lg: '6px',
         },
         font: {
-            sm: '1.35rem',
-            md: '1.4rem',
-            lg: '1.7rem',
+            sm: '0.84375rem',
+            md: '0.875rem',
+            lg: '1.0625rem',
         },
         iconSpacing: {
-            sm: '0.9rem',
-            md: '1rem',
-            lg: '1.1rem',
+            sm: '0.5625rem',
+            md: '0.625rem',
+            lg: '0.6875rem',
         },
     },
     form: {
